@@ -1,0 +1,8 @@
+{
+  "name" : "Bookshelf",
+  "images" : {
+      "side" : "bookshelf.png",
+      "top" : "planks_acacia.png",
+      "bottom" : "planks_acacia.png"
+  }
+}

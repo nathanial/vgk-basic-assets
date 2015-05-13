@@ -1,0 +1,8 @@
+{
+  "name" : "Melon",
+  "images" : {
+    "top" : "melon_top.png",
+    "side" : "melon_side.png",
+    "bottom" : "melon_top.png"
+  }
+}

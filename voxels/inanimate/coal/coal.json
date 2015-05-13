@@ -1,0 +1,10 @@
+[
+  {
+    "name" : "Coal",
+    "images" : "coal_block.png"
+  },
+  {
+    "name" : "Coal Ore",
+    "images" : "coal_ore.png"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "name" : "Acacia Log",
+    "images" : {
+      "side" : "log_acacia.png",
+      "top" : "log_acacia_top.png",
+      "bottom" : "log_acacia_bottom.png"
+    }
+  },
+  {
+    "name" : "Acacia Planks",
+    "images" : "planks_acacia.png"
+  },
+  {
+    "name" : "Acacia Leaves",
+    "images" : "leaves_acacia.png"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "name" : "Redstone Block",
+    "images" : "redstone_block.png"
+  },
+  {
+    "name" : "Redstone Ore",
+    "images" : "redstone_ore.png"
+  }
+]

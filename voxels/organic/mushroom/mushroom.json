@@ -1,0 +1,26 @@
+[
+  {
+    "name" : "Mushroom Inside",
+    "images" : "mushroom_block_inside.png"
+  },
+  {
+    "name" : "Mushroom Brown Skin",
+    "images" : "mushroom_block_skin_brown.png"
+  },
+  {
+    "name" : "Mushroom Red Skin",
+    "images" : "mushroom_block_skin_red.png"
+  },
+  {
+    "name" : "Mushroom Stem Skin",
+    "images" : "mushroom_block_skin_stem.png"
+  },
+  {
+    "name" : "Mycelium",
+    "images" : {
+      "top" : "mycelium_top.png",
+      "side" : "mycelium_side.png",
+      "bottom" : "mycelium_top.png"
+    }
+  }
+]

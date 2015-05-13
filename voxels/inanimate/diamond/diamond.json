@@ -1,0 +1,10 @@
+[
+  {
+    "name" : "Diamond",
+    "images" : "diamond_block.png"
+  },
+  {
+    "name" : "Diamond Ore",
+    "images" : "diamond_ore.png"
+  }
+]

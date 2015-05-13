@@ -1,0 +1,30 @@
+[
+  {
+    "name" : "Quartz Block",
+    "images" : {
+      "top" : "quartz_block_top.png",
+      "side" : "quartz_block_side.png",
+      "bottom" : "quartz_block_bottom.png"
+    }
+  },
+  {
+    "name" : "Chiseled Quart Block",
+    "images" : {
+      "top" : "quartz_block_chiseled_top.png",
+      "side" : "quartz_block_chiseled.png",
+      "bottom" : "quartz_block_chiseled_top.png"
+    }
+  },
+  {
+    "name" : "Lined Quartz Block",
+    "images" : {
+      "top" : "quartz_block_lines_top.png",
+      "side" : "quartz_block_lines.png",
+      "bottom" : "quartz_block_lines_top.png"
+    }
+  },
+  {
+    "name" : "Quartz Ore",
+    "images" : "quartz_ore.png"
+  }
+]

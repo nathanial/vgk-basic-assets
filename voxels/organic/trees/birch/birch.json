@@ -1,0 +1,17 @@
+[
+  {
+    "name" : "Birch Log",
+    "images" : {
+        "top" : "log_birch_top.png",
+        "side" : "log_birch.png"
+    }
+  },
+  {
+    "name" : "Birch Leaves",
+    "images" : "leaves_birch.png"
+  },
+  {
+    "name" : "Birch Planks",
+    "images" : "planks_birch.png"
+  }
+]

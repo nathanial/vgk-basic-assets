@@ -1,0 +1,14 @@
+[
+  {
+    "name" : "Nether Brick",
+    "images": "nether_brick.png"
+  },
+  {
+    "name" : "Netherrack",
+    "images" : "netherrack.png"
+  },
+  {
+    "name" : "Soul Sand",
+    "images" : "soul_sand.png"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "name" : "Crafting Table",
+  "images" : {
+    "top" : "crafting_table_top.png",
+    "side" : "crafting_table_side.png",
+    "front" : "crafting_table_front.png",
+    "bottom" : "planks_acacia.png"
+  }
+}

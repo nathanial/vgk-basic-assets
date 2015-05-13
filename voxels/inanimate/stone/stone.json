@@ -1,0 +1,54 @@
+[
+  {
+    "name" : "Stone",
+    "images" : "stone.png"
+  },
+  {
+    "name" : "Stone Slab",
+    "images" : {
+      "top" : "stone_slab_top.png",
+      "side" : "stone_slab_side.png",
+      "bottom" : "stone_slab_top.png"
+    }
+  },
+  {
+    "name" : "Stone Brick",
+    "images" : "stonebrick.png"
+  },
+  {
+    "name" : "Carved Stone Brick",
+    "images" : "stonebrick_carved.png"
+  },
+  {
+    "name" : "Cracked Stone Brick",
+    "images" : "stonebrick_cracked.png"
+  },
+  {
+    "name" : "Mossy Stone Brick",
+    "images" : "stonebrick_mossy.png"
+  },
+  {
+    "name" : "Granite",
+    "images" : "stone_granite.png"
+  },
+  {
+    "name" : "Smooth Granite",
+    "images" : "stone_granite_smooth.png"
+  },
+  {
+    "name" : "Diorite",
+    "images" : "stone_diorite.png"
+  },
+  {
+    "name" : "Smooth Diorite",
+    "images" : "stone_diorite_smooth.png"
+  },
+  {
+    "name" : "Andesite",
+    "images" : "stone_andesite.png"
+  },
+  {
+    "name" : "Smooth Andesite",
+    "images" : "stone_andesite_smooth.png"
+  }
+]

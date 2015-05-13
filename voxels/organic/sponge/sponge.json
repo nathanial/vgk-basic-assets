@@ -1,0 +1,10 @@
+[
+  {
+    "name" : "Sponge",
+    "images" : "sponge.png"
+  },
+  {
+    "name" : "Sponge Wet",
+    "images" : "sponge_wet.png"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "name" : "Oak Log",
+    "images" : {
+      "top" : "log_oak_top.png",
+      "side" : "log_oak.png",
+      "bottom" : "log_oak_top.png"
+    }
+  },
+  {
+    "name" : "Oak Leaves",
+    "images" : "leaves_oak.png"
+  },
+  {
+    "name" : "Oak Planks",
+    "images" : "planks_oak.png"
+  }
+]

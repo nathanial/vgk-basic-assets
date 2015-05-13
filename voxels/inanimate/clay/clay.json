@@ -1,0 +1,74 @@
+[
+  {
+    "name" : "Clay",
+    "images" : "clay.png"
+  },
+  {
+    "name" : "Hardened Clay",
+    "images" : "hardened_clay.png"
+  },
+  {
+    "name" : "Black Hardened Clay",
+    "images" : "hardened_clay_stained_black.png"
+  },
+  {
+    "name" : "Blue Hardened Clay",
+    "images" : "hardened_clay_stained_blue.png"
+  },
+  {
+    "name" : "Brown Hardened Clay",
+    "images" : "hardened_clay_stained_brown.png"
+  },
+  {
+    "name" : "Cyan Hardened Clay",
+    "images" : "hardened_clay_stained_cyan.png"
+  },
+  {
+    "name" : "Gray Hardened Clay",
+    "images" : "hardened_clay_stained_gray.png"
+  },
+  {
+    "name" : "Green Hardened Clay",
+    "images" : "hardened_clay_stained_green.png"
+  },
+  {
+    "name" : "Light Blue Hardened Clay",
+    "images" : "hardened_clay_stained_light_blue.png"
+  },
+  {
+    "name" : "Lime Hardened Clay",
+    "images" : "hardened_clay_stained_lime.png"
+  },
+  {
+    "name" : "Magenta Hardened Clay",
+    "images" : "hardened_clay_stained_magenta.png"
+  },
+  {
+    "name" : "Orange Hardened Clay",
+    "images" : "hardened_clay_stained_orange.png"
+  },
+  {
+    "name" : "Pink Hardened Clay",
+    "images" : "hardened_clay_stained_pink.png"
+  },
+  {
+    "name" : "Purple Hardened Clay",
+    "images" : "hardened_clay_stained_purple.png"
+  },
+  {
+    "name" : "Red Hardened Clay",
+    "images" : "hardened_clay_stained_red.png"
+  },
+  {
+    "name" : "Silver Hardened Clay",
+    "images" : "hardened_clay_stained_silver.png"
+  },
+  {
+    "name" : "White Hardened Clay",
+    "images" : "hardened_clay_stained_white.png"
+  },
+  {
+    "name" : "Yellow Hardened Clay",
+    "images" : "hardened_clay_stained_yellow.png"
+  }
+]

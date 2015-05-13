@@ -1,0 +1,10 @@
+[
+  {
+    "name" : "Lapis Block",
+    "images" : "lapis_block.png"
+  },
+  {
+    "name" : "Lapis Ore",
+    "images" : "lapis_ore.png"
+  }
+]
