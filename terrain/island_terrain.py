@@ -29,7 +29,9 @@ class IslandTerrain(TerrainGenerator):
         GRASS = Assets.Voxels['Grass'].Block
         DIRT = Assets.Voxels['Dirt'].Block
         STONE = Assets.Voxels['Stone'].Block
+        BEACON = Assets.Voxels['Beacon'].Block
 
+        i = 0
         x = 0
         while x < Chunk.Width:
             y = 0
@@ -49,9 +51,13 @@ class IslandTerrain(TerrainGenerator):
 
                     mountain_value += self.CalculateNoiseValue(pos, grain_1_offset, 0.05) * 2.5 - 1.25
                     if mountain_value >= (y + chunk.Position.y):
-                        chunk.Voxels[self.GetIndex(x,y,z)] = GRASS
-                        if y > 0 and chunk.Voxels[self.GetIndex(x,y-1,z)] == GRASS:
+                        if i % 1000 == 0:
+                            chunk.Voxels[self.GetIndex(x,y,z)] = BEACON
+                        else:
+                            chunk.Voxels[self.GetIndex(x,y,z)] = GRASS
+                        if y > 0 and chunk.Voxels[self.GetIndex(x,y-1,z)] in [GRASS,BEACON]:
                             chunk.Voxels[self.GetIndex(x,y-1,z)] = DIRT
+                        i += 1
                     z += 1
                 y += 1
             x += 1
