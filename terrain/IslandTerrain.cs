@@ -50,14 +50,14 @@ namespace VGKBasicAssets {
 
             var maxCenterBulge = 100.0f;
             var bulgeSlope = (float)Math.Pow(distanceFromCenter, 1.0) * 0.3f;
-            var centerBulge = maxCenterBulge - (bulgeSlope + 10.0f);
+            var centerBulge = maxCenterBulge - bulgeSlope;
             if(centerBulge < 0){
               centerBulge = 0;
             }
             var centerBulgePercentage = centerBulge / maxCenterBulge;
-            mountainValue *= 50.0f;
+            mountainValue *= 35.0f;
             mountainValue += centerBulge;
-            mountainValue *= Mathf.Max(centerBulgePercentage, 0.5f);
+            mountainValue *= Mathf.Min(1.0f, Mathf.Max(centerBulgePercentage, 0.5f));
             mountainValue += 10.0f;
 
             mountainValue -= (distanceFromCenter * distanceFromCenter) / 8000.0f;
@@ -65,12 +65,12 @@ namespace VGKBasicAssets {
             mountainValue += CalculateNoiseValue(pos, _grain1Offset, 0.05f) * 2.5f - 1.25f;
             if(mountainValue >= Mathf.Pow(y + chunk.Position.y, 1.0f)){
               if(i % 1000 == 0){
-                chunk.Voxels[GetIndex(x,y,z)] = BEACON;
+                chunk[x,y,z] = BEACON;
               } else {
-                chunk.Voxels[GetIndex(x,y,z)] = GRASS;
+                chunk[x,y,z] = GRASS;
               }
-              if(y > 0 && (chunk.Voxels[GetIndex(x,y-1,z)] == GRASS || chunk.Voxels[GetIndex(x,y-1,z)] == BEACON)) {
-                chunk.Voxels[GetIndex(x,y-1,z)] = DIRT;
+              if(y > 0 && (chunk[x,y-1,z] == GRASS || chunk[x,y-1,z] == BEACON)) {
+                chunk[x,y-1,z] = DIRT;
               }
             }
             i += 1;
