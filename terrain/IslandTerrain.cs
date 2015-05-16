@@ -54,11 +54,11 @@ namespace VGKBasicAssets {
 
             mountainValue *= heightSwing;
             mountainValue += heightBase;
-            mountainValue -= (distanceFromCenter * distanceFromCenter) / (1500.0f * (ViewDistance / 200.0f));
+            mountainValue -= (distanceFromCenter * distanceFromCenter) / 10000.0f;
 
             mountainValue += CalculateNoiseValue(pos, _grain1Offset, 0.05f) * 2.5f - 1.25f;
             if(mountainValue >= (y + chunk.Position.y)){
-              if(i % 1000 == 0){
+              if(i % 10000 == 0){
                 chunk.Voxels[GetIndex(x,y,z)] = BEACON;
               } else {
                 chunk.Voxels[GetIndex(x,y,z)] = GRASS;
