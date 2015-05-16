@@ -63,10 +63,11 @@ namespace VGKBasicAssets {
               } else {
                 chunk.Voxels[GetIndex(x,y,z)] = GRASS;
               }
-              if(y > 0 && chunk.Voxels[GetIndex(x,y-1,z)] == GRASS || chunk.Voxels[GetIndex(x,y-1,z)] == BEACON) {
+              if(y > 0 && (chunk.Voxels[GetIndex(x,y-1,z)] == GRASS || chunk.Voxels[GetIndex(x,y-1,z)] == BEACON)) {
                 chunk.Voxels[GetIndex(x,y-1,z)] = DIRT;
               }
             }
+            i += 1;
           }
         }
       }
