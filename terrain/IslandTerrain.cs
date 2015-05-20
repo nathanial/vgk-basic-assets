@@ -10,9 +10,11 @@ namespace VGKBasicAssets {
     readonly Vector3 _grain0Offset;
     readonly Vector3 _grain1Offset;
     readonly Vector3 _grain2Offset;
+    readonly float _bulgeOffset;
+    readonly float _distanceCoefficient;
 
     public IslandTerrain(){
-        ViewDistance = 400;
+        ViewDistance = 2000;
         _grain0Offset = new Vector3(
           (float)(_random.NextDouble() * 10000.0),
           (float)(_random.NextDouble() * 10000.0),
@@ -28,6 +30,8 @@ namespace VGKBasicAssets {
           (float)(_random.NextDouble() * 10000.0),
           (float)(_random.NextDouble() * 10000.0)
         );
+        _bulgeOffset = (float)_random.NextDouble() * 1000.0f;
+        _distanceCoefficient = 20000.0f * (float)_random.NextDouble();
     }
 
     public override void CreateVoxels(Chunk chunk){
@@ -37,19 +41,21 @@ namespace VGKBasicAssets {
       var BEACON = Assets.Voxels["Beacon"].Block;
 
       var i = 0;
-      for(var x = 0; x < Chunk.Width; x++){
-        for(var y = 0; y < Chunk.Height; y++){
-          for(var z = 0; z < Chunk.Width; z++){
+
+      for(var x = 0; x < Chunk.Size; x++){
+        for(var y = 0; y < Chunk.Size; y++){
+          for(var z = 0; z < Chunk.Size; z++){
             var pos = new Vector3(x,y,z) + chunk.Position.ToVector3();
             var mountainValue = CalculateNoiseValue(pos, _grain0Offset, 0.009f);
-            var distanceFromCenter = Mathf.Sqrt(pos.x * pos.x + pos.z * pos.z);
+            var distanceFromCenter = Mathf.Sqrt(Mathf.Pow(pos.x, 2.0f) + Mathf.Pow(pos.z, 2.0f));
+            var bulgeCenter = Mathf.Sqrt(Mathf.Pow(pos.x - _bulgeOffset, 2.0f) + Mathf.Pow(pos.z - _bulgeOffset, 2.0f));
 
             if(mountainValue < 0){
               mountainValue = 0;
             }
 
-            var maxCenterBulge = 100.0f;
-            var bulgeSlope = (float)Math.Pow(distanceFromCenter, 1.0) * 0.3f;
+            var maxCenterBulge = 200.0f;
+            var bulgeSlope = (float)Math.Pow(bulgeCenter, 1.0) * 0.3f;
             var centerBulge = maxCenterBulge - bulgeSlope;
             if(centerBulge < 0){
               centerBulge = 0;
@@ -60,7 +66,7 @@ namespace VGKBasicAssets {
             mountainValue *= Mathf.Min(1.0f, Mathf.Max(centerBulgePercentage, 0.5f));
             mountainValue += 10.0f;
 
-            mountainValue -= (distanceFromCenter * distanceFromCenter) / 8000.0f;
+            mountainValue -= ((distanceFromCenter * distanceFromCenter) / _distanceCoefficient);
 
             mountainValue += CalculateNoiseValue(pos, _grain1Offset, 0.05f) * 2.5f - 1.25f;
             if(mountainValue >= Mathf.Pow(y + chunk.Position.y, 1.0f)){
