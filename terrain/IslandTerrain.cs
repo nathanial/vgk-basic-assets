@@ -14,7 +14,6 @@ namespace VGKBasicAssets {
     readonly float _distanceCoefficient;
 
     public IslandTerrain(){
-        ViewDistance = 2000;
         _grain0Offset = new Vector3(
           (float)(_random.NextDouble() * 10000.0),
           (float)(_random.NextDouble() * 10000.0),
@@ -30,8 +29,8 @@ namespace VGKBasicAssets {
           (float)(_random.NextDouble() * 10000.0),
           (float)(_random.NextDouble() * 10000.0)
         );
-        _bulgeOffset = (float)_random.NextDouble() * 1000.0f;
-        _distanceCoefficient = 20000.0f * (float)_random.NextDouble();
+        _bulgeOffset = 200.0f;
+        _distanceCoefficient = 0.0001f;
     }
 
     public override void CreateVoxels(Chunk chunk){
@@ -66,7 +65,7 @@ namespace VGKBasicAssets {
             mountainValue *= Mathf.Min(1.0f, Mathf.Max(centerBulgePercentage, 0.5f));
             mountainValue += 10.0f;
 
-            mountainValue -= ((distanceFromCenter * distanceFromCenter) / _distanceCoefficient);
+            mountainValue -= (distanceFromCenter * distanceFromCenter) * _distanceCoefficient;
 
             mountainValue += CalculateNoiseValue(pos, _grain1Offset, 0.05f) * 2.5f - 1.25f;
             if(mountainValue >= Mathf.Pow(y + chunk.Position.y, 1.0f)){
