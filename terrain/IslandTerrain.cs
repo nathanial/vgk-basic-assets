@@ -6,7 +6,7 @@ using System;
 
 namespace VGKBasicAssets {
   public class IslandTerrain : TerrainGenerator {
-    readonly System.Random _random = new System.Random();
+    readonly System.Random _random = new System.Random(0);
     readonly Vector3 _grain0Offset;
     readonly Vector3 _grain1Offset;
     readonly Vector3 _grain2Offset;
@@ -30,7 +30,7 @@ namespace VGKBasicAssets {
           (float)(_random.NextDouble() * 10000.0)
         );
         _bulgeOffset = 200.0f;
-        _distanceCoefficient = 0.0001f;
+        _distanceCoefficient = 0.0005f;
     }
 
     public override void CreateVoxels(Chunk chunk){
@@ -53,7 +53,7 @@ namespace VGKBasicAssets {
               mountainValue = 0;
             }
 
-            var maxCenterBulge = 200.0f;
+            var maxCenterBulge = 100.0f;
             var bulgeSlope = (float)Math.Pow(bulgeCenter, 1.0) * 0.3f;
             var centerBulge = maxCenterBulge - bulgeSlope;
             if(centerBulge < 0){
