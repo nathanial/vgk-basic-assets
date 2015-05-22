@@ -1,9 +1,0 @@
-{
-  "name" : "Beacon",
-  "images" : "beacon.png",
-  "material" : "glow",
-  "light" : true,
-  "lightColor" : "#3c76ff",
-  "lightIntensity" : 2.5,
-  "lightRange" : 20
-}
