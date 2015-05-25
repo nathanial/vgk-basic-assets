@@ -22,13 +22,15 @@ namespace VGKBasicAssets {
         EmitTo = ManaZone.Ambient
       });
       Lights.Add(new VoxelLight {
-        Color = "#3c76ff",
-        IntensityFunction = (entity, position) => {
-          return Drains[0].FindValue(entity, position) * 0.25;
-        },
-        RangeFunction = (entity, position) => {
-          return Drains[0].FindValue(entity, position) * 2;
-        }
+        Color = "#ffffff",
+        Intensity = .5f,
+        Range = 20
+        // IntensityFunction = (entity, position) => {
+        //   return Drains[0].FindValue(entity, position) * 0.25;
+        // },
+        // RangeFunction = (entity, position) => {
+        //   return Drains[0].FindValue(entity, position) * 2;
+        // }
       });
     }
   }
