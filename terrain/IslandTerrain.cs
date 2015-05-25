@@ -35,7 +35,6 @@ namespace VGKBasicAssets {
     public override void CreateVoxels(Chunk chunk){
       var GRASS = Assets.Voxels["Grass"].Block;
       var DIRT = Assets.Voxels["Dirt"].Block;
-      var STONE = Assets.Voxels["Stone"].Block;
       var BEACON = Assets.Voxels["Beacon"].Block;
 
       var i = 0;

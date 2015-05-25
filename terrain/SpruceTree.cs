@@ -4,7 +4,7 @@ using VGK;
 namespace VGKBasicAssets {
 
   public class SpruceTree : VoxelItem {
-    public SpruceTree(Entity entity){
+    public SpruceTree(Entity entity) : base(entity){
       var SPRUCE_LOG = Assets.Voxels["Spruce Log"].Block;
       var SPRUCE_LEAVES = Assets.Voxels["Spruce Leaves"].Block;
       for(var y = 0; y < 10; y++){
