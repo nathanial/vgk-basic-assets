@@ -1,4 +1,3 @@
-using VGK.Modules;
 using VGK;
 using SimplexNoise;
 using UnityEngine;

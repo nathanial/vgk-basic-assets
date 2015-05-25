@@ -1,8 +1,0 @@
-{
-  "name" : "Daylight Detector",
-  "images" : {
-    "top" : "daylight_detector_top.png",
-    "side" : "daylight_detector_side.png",
-    "bottom" : "daylight_detector_top.png"
-  }
-}
