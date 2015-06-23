@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace VGKBasicAssets {
   public class GlassMaterial : ChunkMaterial {
-    readonly Material _material = new Material(Shader.Find("Diffuse/Transparent"));
+    readonly Material _material = new Material(Shader.Find("Diffuse"));
 
     public override Material Material {
       get { return _material; }
